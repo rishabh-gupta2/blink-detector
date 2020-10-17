@@ -12,11 +12,14 @@ import time
 frameCount = 0
 blinkCount = 0
 
+leftEyeStr = 'left_eye'
+rightEyeStr = 'right_eye'
+
 faceDetector = dlib.get_frontal_face_detector()
 landmarksPredictor = dlib.shape_predictor(shapePredictorPath)
 
-leftEyeIdx = face_utils.FACIAL_LANDMARKS_IDXS['left_eye']
-rightEyeIdx = face_utils.FACIAL_LANDMARKS_IDXS['right_eye']
+leftEyeIdx = face_utils.FACIAL_LANDMARKS_IDXS[leftEyeStr]
+rightEyeIdx = face_utils.FACIAL_LANDMARKS_IDXS[rightEyeStr]
 
 if FILE_VIDEO_STREAM:
 	vs = FileVideoStream(videoFilePath).start()
