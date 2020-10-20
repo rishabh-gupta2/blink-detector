@@ -6,4 +6,4 @@ def calculateEAR(P):
 	horizontalDist = euclidean(P[0], P[3])
 
 	ear = (verticalDist1 + verticalDist2)/(2.0*horizontalDist) 
-	return ear
+	return ear	
